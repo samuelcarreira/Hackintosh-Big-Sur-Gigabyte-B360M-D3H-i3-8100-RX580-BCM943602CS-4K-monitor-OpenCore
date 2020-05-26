@@ -36,3 +36,9 @@ Follow the guide https://dortania.github.io/OpenCore-Desktop-Guide/
 
 ### Bios Settings
 ...
+
+
+## Credits
+Amazing work OpenCore Team
+Reddit
+...
