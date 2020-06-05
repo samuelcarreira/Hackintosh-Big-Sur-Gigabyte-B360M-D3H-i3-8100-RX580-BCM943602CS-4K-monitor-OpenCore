@@ -1,14 +1,19 @@
 # Hackintosh-Catalina-Gigabyte-B360M-D3H-i3-8100-RX580-BCM943602CS-4K-monitor-OpenCore
 
+## Versions
+macOS Catalina 10.15.5
+OpenCore 0.5.9
+
 ## What's working
 - Graphics acceleration
 - Sound
 - All USB ports
 - Ethernet
 - Wifi and Bluetooth (Airdrop)
+- everything :-)
 
 ## Problems
-- I cannot shutdown (I am currently working on this)
+- none
 
 ## Complete hardware description
 - Gigabyte B360M D3H
