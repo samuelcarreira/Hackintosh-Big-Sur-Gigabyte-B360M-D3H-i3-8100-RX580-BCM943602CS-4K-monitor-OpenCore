@@ -7,22 +7,22 @@ macOS Catalina 10.15.5
 OpenCore 0.5.9
 
 ## What's working
-|       | Status | Aditional details |
-| ----------- |  :----: | ----------- |
-| Sound  | OK  |   |
-| USB Ports  | OK  | 6 x USB 2.0; 4 x USB 3.0: I didn't perform any speed test on the USB 3.1 port  |
-| WiFi  | OK  |   |
-| Bluetooth  | OK  |   |
-| Airdrop/Handoff  | OK  |   |
-| Ethrnet | OK |
-| Unlock with Apple Watch | OK  |   |
-| Airdrop/Handoff  | OK  |   |
-| Graphics acceleration (dGPU) | OK?  | Connected to two monitors through DisplayPort and HDMI. I didn't compare the performance  |
-| Sidecar  | No  |  iPad shows a black screen |
-| Restart/Shutdown  | OK  |   |
-| Sleep  | OK  |   |
-| CPU power managment  | ?  | Not tested  |
-| iServices | OK  |   |
+||Status|Additional details|
+|:-|:-|:-|
+|Sound|OK||
+|USB Ports|OK|6 x USB 2.0; 4 x USB 3.0: I didn't perform any speed test on the USB 3.1 port|
+|WiFi|OK||
+|Bluetooth|OK||
+|Airdrop/Handoff|OK||
+|Ethernet|OK||
+|Unlock with Apple Watch|OK||
+|Airdrop/Handoff|OK||
+|Graphics acceleration (dGPU)|OK?|Connected to two monitors through DisplayPort and HDMI. I didn't compare the performance|
+|Sidecar|No|iPad shows a black screen|
+|Restart/Shutdown|OK||
+|Sleep|OK||
+|CPU power management|?|Not tested|
+|iServices|OK||
 
 ## Complete hardware description
 - Gigabyte B360M D3H
