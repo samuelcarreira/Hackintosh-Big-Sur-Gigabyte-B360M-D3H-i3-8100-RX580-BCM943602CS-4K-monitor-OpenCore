@@ -10,7 +10,7 @@ OpenCore 0.5.9
 |       | Status | Aditional details |
 | ----------- |  :----: | ----------- |
 | Sound  | OK  |   |
-| USB Ports  | OK  | I am using X USB 2.0 and 3.0...  |
+| USB Ports  | OK  | 6 x USB 2.0; 4 x USB 3.0: I didn't perform any speed test on the USB 3.1 port  |
 | WiFi  | OK  |   |
 | Bluetooth  | OK  |   |
 | Airdrop/Handoff  | OK  |   |
@@ -23,9 +23,6 @@ OpenCore 0.5.9
 | Sleep  | OK  |   |
 | CPU power managment  | ?  | Not tested  |
 | iServices | OK  |   |
-
-## Problems
-- none
 
 ## Complete hardware description
 - Gigabyte B360M D3H
@@ -48,14 +45,13 @@ Because I mainly use Windows and Linux (for professional reasons) I didn't need 
 - *16GB USB Flash Drive* The new macOS Catalina doesn't fit anymore on a 8GB flash drive, because I had problems on the past with my USB 3.0 flash drive, I use an old USB 2.0 flash drive to hackintosh
 
 ## Instructions
-
 Follow the guide https://dortania.github.io/OpenCore-Desktop-Guide/
 
 ### Bios Settings
-...
+TODO
 
 
 ## Credits
 https://github.com/acidanthera/OpenCorePkg
 https://www.reddit.com/r/hackintosh/
-...
+
