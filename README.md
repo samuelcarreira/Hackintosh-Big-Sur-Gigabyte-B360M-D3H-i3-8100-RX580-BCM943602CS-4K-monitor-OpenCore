@@ -1,16 +1,28 @@
 # Hackintosh-Catalina-Gigabyte-B360M-D3H-i3-8100-RX580-BCM943602CS-4K-monitor-OpenCore
 
+## *NOTE: This is a work in progress*
+
 ## Versions
 macOS Catalina 10.15.5
 OpenCore 0.5.9
 
 ## What's working
-- Graphics acceleration
-- Sound
-- All USB ports
-- Ethernet
-- Wifi and Bluetooth (Airdrop)
-- everything :-)
+|       | Status | Aditional details |
+| ----------- |  :----: | ----------- |
+| Sound  | OK  |   |
+| USB Ports  | OK  | I am using X USB 2.0 and 3.0...  |
+| WiFi  | OK  |   |
+| Bluetooth  | OK  |   |
+| Airdrop/Handoff  | OK  |   |
+| Ethrnet | OK |
+| Unlock with Apple Watch | OK  |   |
+| Airdrop/Handoff  | OK  |   |
+| Graphics acceleration (dGPU) | OK?  | Connected to two monitors through DisplayPort and HDMI. I didn't compare the performance  |
+| Sidecar  | No  |  iPad shows a black screen |
+| Restart/Shutdown  | OK  |   |
+| Sleep  | OK  |   |
+| CPU power managment  | ?  | Not tested  |
+| iServices | OK  |   |
 
 ## Problems
 - none
@@ -44,6 +56,6 @@ Follow the guide https://dortania.github.io/OpenCore-Desktop-Guide/
 
 
 ## Credits
-Amazing work OpenCore Team
-Reddit
+https://github.com/acidanthera/OpenCorePkg
+https://www.reddit.com/r/hackintosh/
 ...
