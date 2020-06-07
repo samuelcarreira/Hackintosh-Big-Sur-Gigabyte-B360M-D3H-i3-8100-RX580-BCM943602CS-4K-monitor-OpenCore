@@ -23,6 +23,8 @@ OpenCore 0.5.9
 |Sleep|OK||
 |CPU power management|?|Not tested|
 |iServices|OK||
+|DRM| OK?| Apple TV works well but the mouse cursor disappears. Netflix starts to play but after some seconds the video turns black|
+
 
 ## Complete hardware description
 - Gigabyte B360M D3H
