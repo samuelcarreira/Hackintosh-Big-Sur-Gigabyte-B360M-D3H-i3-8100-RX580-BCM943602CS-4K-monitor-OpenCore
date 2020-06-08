@@ -49,11 +49,110 @@ Because I mainly use Windows and Linux (for professional reasons) I didn't need 
 ## Instructions
 Follow the guide https://dortania.github.io/OpenCore-Desktop-Guide/
 
+## EFI Folder
+```
+├───BOOT
+│       BOOTx64.efi
+│       
+└───OC
+    │   config.plist
+    │   OpenCore.efi
+    │   
+    ├───ACPI
+    │       SSDT-AWAC.aml
+    │       SSDT-EC.aml
+    │       SSDT-PLUG.aml
+    │       SSDT-PMC.aml
+    │       SSDT-SBUS-MCHC.aml
+    │       SSDT-USBX.aml
+    │       
+    ├───Bootstrap
+    │       Bootstrap.efi
+    │       
+    ├───Drivers
+    │       AudioDxe.efi
+    │       CrScreenshotDxe.efi
+    │       HfsPlus.efi
+    │       OpenRuntime.efi
+    │       
+    ├───Kexts
+    │   ├───AppleALC.kext
+    │   │   └───Contents
+    │   │       │   Info.plist
+    │   │       │   
+    │   │       └───MacOS
+    │   │               AppleALC
+    │   │               
+    │   ├───IntelMausi.kext
+    │   │   └───Contents
+    │   │       │   Info.plist
+    │   │       │   
+    │   │       └───MacOS
+    │   │               IntelMausi
+    │   │               
+    │   ├───Lilu.kext
+    │   │   └───Contents
+    │   │       │   Info.plist
+    │   │       │   
+    │   │       └───MacOS
+    │   │               Lilu
+    │   │               
+    │   ├───SMCProcessor.kext
+    │   │   └───Contents
+    │   │       │   Info.plist
+    │   │       │   
+    │   │       └───MacOS
+    │   │               SMCProcessor
+    │   │               
+    │   ├───SMCSuperIO.kext
+    │   │   └───Contents
+    │   │       │   Info.plist
+    │   │       │   
+    │   │       └───MacOS
+    │   │               SMCSuperIO
+    │   │               
+    │   ├───USBInjectAll.kext
+    │   │   └───Contents
+    │   │       │   Info.plist
+    │   │       │   
+    │   │       ├───MacOS
+    │   │       │       USBInjectAll
+    │   │       │       
+    │   │       └───_CodeSignature
+    │   │               CodeResources
+    │   │               
+    │   ├───VirtualSMC.kext
+    │   │   └───Contents
+    │   │       │   Info.plist
+    │   │       │   
+    │   │       └───MacOS
+    │   │               VirtualSMC
+    │   │               
+    │   ├───WhateverGreen.kext
+    │   │   └───Contents
+    │   │       │   Info.plist
+    │   │       │   
+    │   │       └───MacOS
+    │   │               WhateverGreen
+    │   │               
+    │   └───XHCI-unsupported.kext
+    │       └───Contents
+    │               Info.plist
+    │               
+    ├───Resources
+    │   ├───Audio
+    │   ├───Font
+    │   ├───Image
+    │   └───Label
+    └───Tools
+            OpenShell.efi
+```
+
 ### Bios Settings
 TODO
 
 
 ## Credits
-https://github.com/acidanthera/OpenCorePkg
-https://www.reddit.com/r/hackintosh/
+- https://github.com/acidanthera/OpenCorePkg
+- https://www.reddit.com/r/hackintosh/
 
