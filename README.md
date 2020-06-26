@@ -9,21 +9,21 @@ OpenCore 0.5.9
 ## What's working
 ||Status|Additional details|
 |:-|:-|:-|
-|Sound|OK||
-|USB Ports|OK|6 x USB 2.0; 4 x USB 3.0: I didn't perform any speed test on the USB 3.1 port|
-|WiFi|OK||
-|Bluetooth|OK||
-|Airdrop/Handoff|OK||
-|Ethernet|OK||
-|Unlock with Apple Watch|OK||
-|Airdrop/Handoff|OK||
-|Graphics acceleration (dGPU)|OK?|Connected to two monitors through DisplayPort and HDMI. I didn't compare the performance|
-|Sidecar|No|iPad shows a black screen|
-|Restart/Shutdown|OK||
-|Sleep|OK||
-|CPU power management|?|Not tested|
-|iServices|OK||
-|DRM| OK?| Apple TV works well but the mouse cursor disappears. Netflix starts to play but after some seconds the video turns black|
+|Sound| :ok_hand: ||
+|USB Ports| :ok_hand: |6 x USB 2.0; 4 x USB 3.0: I didn't perform any speed test on the USB 3.1 port|
+|WiFi| :ok_hand: ||
+|Bluetooth| :ok_hand: ||
+|Airdrop/Handoff| :ok_hand: ||
+|Ethernet| :ok_hand: ||
+|Unlock with Apple Watch| :ok_hand: ||
+|Airdrop/Handoff| :ok_hand: ||
+|Graphics acceleration (dGPU)| :ok_hand: :grey_exclamation: |Connected to two monitors through DisplayPort and HDMI. I didn't compare the performance|
+|Sidecar| :thumbsdown: |iPad shows a black screen|
+|Restart/Shutdown| :ok_hand: ||
+|Sleep| :ok_hand: ||
+|CPU power management| :question: |Not tested|
+|iServices| :ok_hand: ||
+|DRM| :thumbsup: :grey_exclamation: | Apple TV works well but the mouse cursor disappears. Netflix starts to play but after some seconds the video turns black|
 
 
 ## Complete hardware description
