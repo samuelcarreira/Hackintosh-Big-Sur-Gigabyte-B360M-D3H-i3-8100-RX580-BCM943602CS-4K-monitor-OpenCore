@@ -149,8 +149,7 @@ Follow the guide https://dortania.github.io/OpenCore-Desktop-Guide/
 ```
 
 ### Bios Settings
-TODO
-
+[Check this file](BIOS.md)
 
 ## Credits
 - https://github.com/acidanthera/OpenCorePkg
