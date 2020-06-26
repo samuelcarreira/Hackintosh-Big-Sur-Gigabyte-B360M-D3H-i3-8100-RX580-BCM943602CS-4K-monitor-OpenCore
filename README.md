@@ -2,9 +2,11 @@
 
 ## *NOTE: This is a work in progress*
 
+![Screenshot](picture.jpg)
+
 ## Versions
-macOS Catalina 10.15.5
-OpenCore 0.5.9
+- macOS Catalina 10.15.5
+- OpenCore 0.5.9
 
 ## What's working
 ||Status|Additional details|
