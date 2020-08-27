@@ -5,8 +5,8 @@
 ![Screenshot](picture.jpg)
 
 ## Versions
-- macOS Catalina 10.15.5
-- OpenCore 0.5.9
+- macOS Catalina 10.15.6 (*updated*)
+- OpenCore 0.6.0 (*updated*)
 
 ## What's working
 ||Status|Additional details|
@@ -152,6 +152,23 @@ Follow the guide https://dortania.github.io/OpenCore-Desktop-Guide/
 
 ### Bios Settings
 [Check this file](BIOS.md)
+
+### OpenCore 0.5.9 to 0.6.0 update
+- Backup your EFI folder on a USB flash drive
+- Follow the instructions on the official guide: https://dortania.github.io/OpenCore-Post-Install/universal/update.html#updating-opencore
+- Compare the config.plist with the sample.plist and configure it accordingly. Note that you need to remove the `BlacklistAppleUpdate` key because it's deprecated and it trigger a warning
+- Reboot and check for the system stability
+
+### macOS 10.15.6 update
+- Update OpenCore to the latest version
+- Update macOS
+- The system will start the update and it will restart automatically (wait a few minutes)
+- When the system restarts, choose on the OpenCore boot manager the new option to Install macOS
+- The update can take more than 15 minutes
+- The system will reboot automatically and then boot normally on the OpenCore boot manager
+- After a longer boot process, you will be asked to introduce your iCloud password and then you can log in normally
+- Restart the system to check for any problems on the boot loader
+- Done (it was easier than I thought)!
 
 ## Credits
 - https://github.com/acidanthera/OpenCorePkg
