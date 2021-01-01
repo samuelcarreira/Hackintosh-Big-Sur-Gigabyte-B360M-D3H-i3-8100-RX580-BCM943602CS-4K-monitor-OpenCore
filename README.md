@@ -5,8 +5,8 @@
 ![Screenshot](picture.jpg)
 
 ## Versions
-- macOS Catalina 10.15.6 (*updated*)
-- OpenCore 0.6.0 (*updated*)
+- macOS Big Sur 11.1 (*updated*)
+- OpenCore 0.6.4 (*updated*)
 
 ## What's working
 ||Status|Additional details|
@@ -32,14 +32,14 @@
 - Gigabyte B360M D3H
 - Intel i3-8100 @3.60GHz
 - Sapphire Radeon RX 580 Nitro+
-- 2x4GB DDR4 2400MHz
-- Wifi and Bluetooth card (PCI-express 1x adapter BCM943602CS
+- 4x4GB DDR4 2400MHz
+- Wifi and Bluetooth card (PCI-express 1x adapter BCM943602CS)
 - Dual monitor setup:
   - 4K monitor (DisplayPort)
   - 1080p vertical monitor (HDMI)
 - Dual boot system
-  - 500GB SSD for Windows/Linux
-  - 128GB SDD only for MacOS
+  - 500GB NVME SSD for Windows/Linux
+  - 500GB SDD only for MacOS
 
 
 ## Dual boot
