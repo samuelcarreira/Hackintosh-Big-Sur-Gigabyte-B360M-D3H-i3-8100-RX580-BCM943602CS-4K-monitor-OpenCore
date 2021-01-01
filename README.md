@@ -25,7 +25,7 @@
 |Sleep| :ok_hand: ||
 |CPU power management| :question: |Not tested|
 |iServices| :ok_hand: ||
-|DRM| :thumbsup: :grey_exclamation: | Apple TV works well but the mouse cursor disappears. Netflix starts to play but after some seconds the video turns black|
+|DRM| :thumbsup: :grey_exclamation: | Apple TV works fine! Netflix plays on chrome |
 
 
 ## Complete hardware description
