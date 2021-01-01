@@ -1,4 +1,4 @@
-# Hackintosh-Catalina-Gigabyte-B360M-D3H-i3-8100-RX580-BCM943602CS-4K-monitor-OpenCore
+# Hackintosh-Big-Sur-Gigabyte-B360M-D3H-i3-8100-RX580-BCM943602CS-4K-monitor-OpenCore
 
 ## *NOTE: This is a work in progress*
 
@@ -73,7 +73,6 @@ Follow the guide https://dortania.github.io/OpenCore-Desktop-Guide/
     │       
     ├───Drivers
     │       AudioDxe.efi
-    │       CrScreenshotDxe.efi
     │       HfsPlus.efi
     │       OpenRuntime.efi
     │       
@@ -153,11 +152,19 @@ Follow the guide https://dortania.github.io/OpenCore-Desktop-Guide/
 ### Bios Settings
 [Check this file](BIOS.md)
 
+## Updates
+
 ### OpenCore 0.5.9 to 0.6.0 update
 - Backup your EFI folder on a USB flash drive
 - Follow the instructions on the official guide: https://dortania.github.io/OpenCore-Post-Install/universal/update.html#updating-opencore
 - Compare the config.plist with the sample.plist and configure it accordingly. Note that you need to remove the `BlacklistAppleUpdate` key because it's deprecated and it trigger a warning
 - Reboot and check for the system stability
+
+### OpenCore 0.6.0 to 0.6.4 update (NEW)
+- Backup your EFI folder on a USB flash drive
+- Follow the instructions on the official guide: https://dortania.github.io/OpenCore-Post-Install/universal/update.html#updating-opencore
+- Compare the config.plist with the sample.plist and configure it accordingly. Use the validator to check for errors.
+- Reboot and check for the system stability (after that backup again your EFI folder)
 
 ### macOS 10.15.6 update
 - Update OpenCore to the latest version
@@ -167,6 +174,19 @@ Follow the guide https://dortania.github.io/OpenCore-Desktop-Guide/
 - The update can take more than 15 minutes
 - The system will reboot automatically and then boot normally on the OpenCore boot manager
 - After a longer boot process, you will be asked to introduce your iCloud password and then you can log in normally
+- Restart the system to check for any problems on the boot loader
+- Done (it was easier than I thought)!
+
+### macOS 10.15.6 to 11.1 Big Sur upgrade (NEW)
+- Update OpenCore to the latest version (at the time was 0.6.4)
+- Prepare your USB boot drive (if you want you can use the older drive with EFI folder and the macOS catalina installer)
+- Upgrade macOS from the system menu (as in a normal system)
+- The system will start the update and it will restart automatically (wait a few minutes)
+- When the system restarts, choose on the OpenCore boot manager the new option to Install macOS
+- The update can take more than 30 minutes
+- I had an issue with the displayPort Screen, so I disconnected that monitor and used only the HDMI one
+- I had only a system freeze during the installation (had to hard shutdown the system)
+- Copy the backup of the EFI folder to your new blank EFI folder
 - Restart the system to check for any problems on the boot loader
 - Done (it was easier than I thought)!
 
