@@ -5,8 +5,8 @@
 ![Screenshot](picture.jpg)
 
 ## Versions
-- macOS Big Sur 11.2.3 (*updated*)
-- OpenCore 0.6.7 (*updated*)
+- macOS Big Sur 11.3 (*updated*)
+- OpenCore 0.6.8 (*updated*)
 
 ## What's working
 ||Status|Additional details|
@@ -199,6 +199,23 @@ Sample.plist -> UEFI -> Quirks - Missing Key: DeduplicateBootOrder
 
 - Reboot and check for the system stability (after that backup again your EFI folder)
 
+### OpenCore 0.6.7 to 0.6.8 update (NEW)
+- Backup your EFI folder on a USB flash drive
+- Follow the instructions on the official guide: https://dortania.github.io/OpenCore-Post-Install/universal/update.html#updating-opencore
+- Compare the config.plist with the sample.plist and configure it accordingly. Use the ocvalidator to check for errors. In this update I just had to delete some keys and add a few ones.
+```
+Add:
+ACPI -> Patch -> Array -> base and baseskip
+Booter -> Quirks -> ForceBooterSignature
+UEFI -> AppleInput
+
+Remove:
+DevicePorperties -> PciRoot...
+UEFI -> ProtocolOverrides -> AppleEvent
+```
+- Reboot and check for the system stability (after that backup again your EFI folder)
+
+
 ### macOS 10.15.6 update
 - Update OpenCore to the latest version
 - Update macOS
@@ -224,7 +241,7 @@ Sample.plist -> UEFI -> Quirks - Missing Key: DeduplicateBootOrder
 - Done (it was easier than I thought)!
 
 
-### macOS 11.2.3 update (NEW)
+### macOS 11.2.3 update
 - Update OpenCore to the latest version (at the time was 0.6.7)
 - Update also your kexts and test if the system is stable
 - Prepare your USB boot drive with a copy of your EFI folder
@@ -239,6 +256,21 @@ Sample.plist -> UEFI -> Quirks - Missing Key: DeduplicateBootOrder
 - Restart the system to check for any problems on the boot loader
 - Done: no fuzz with the EFI folder or crashes!
 
+### macOS 11.3 update (NEW)
+- Update OpenCore to the latest version (at the time was 0.6.8)
+- Update also your kexts and test if the system is stable
+- Prepare your USB boot drive with a copy of your EFI folder
+- Update macOS from the system menu (as in a normal system). The download of the 5.7b update and the initial install take ~ 10 mins. After that it will restart automatically
+- When the system restarts, choose on the OpenCore boot manager the new option that appear on the menu (Boot Macintosh HD...)
+- It start one very verbose boot process (a lot of debug messages) ~ 4 mins.
+- The system restarts automatically
+- Choose the normal Mac boot entry
+- After a small verbose boot the Apple logo appears with the progress bar ~ 3 mins.
+- The system restarts automatically
+- A small verbose boot and it shows after the Apple logo with the progress bar, but this time with the estimated time remaining ~ 10 mins.
+- The login screen appears, and you can enter in your session. Update done!
+- Restart the system to check for any problems on the boot loader
+- Done: no fuzz with the EFI folder or crashes!
 
 
 ## Credits
