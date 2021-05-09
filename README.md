@@ -5,7 +5,7 @@
 ![Screenshot](picture.jpg)
 
 ## Versions
-- macOS Big Sur 11.3 (*updated*)
+- macOS Big Sur 11.3.1 (*updated*)
 - OpenCore 0.6.8 (*updated*)
 
 ## What's working
@@ -37,13 +37,14 @@
 - Dual monitor setup:
   - 4K monitor (DisplayPort)
   - 1080p vertical monitor (HDMI)
-- Dual boot system
-  - 500GB NVME SSD for Windows/Linux
-  - 500GB SDD only for MacOS
+- Triple boot system
+  - 500GB NVME SSD for Windows
+  - 500GB SDD for MacOS
+  - 500GB SDD for Linux
 
 
 ## Dual boot
-Because I mainly use Windows and Linux (for professional reasons) I didn't need a quick dual boot setup. So I use a cheap SSD for macOS. When I want to boot on macOS, I press F12 to select the BIOS startup disk.
+Because I mainly use Windows and Linux (for professional reasons) I didn't need a quick dual boot setup. When I want to boot on macOS, I press F12 to select the BIOS startup disk.
 
 ## Material required
 - *16GB USB Flash Drive* The new macOS Catalina doesn't fit anymore on a 8GB flash drive, because I had problems on the past with my USB 3.0 flash drive, I use an old USB 2.0 flash drive to hackintosh
@@ -256,11 +257,25 @@ UEFI -> ProtocolOverrides -> AppleEvent
 - Restart the system to check for any problems on the boot loader
 - Done: no fuzz with the EFI folder or crashes!
 
-### macOS 11.3 update (NEW)
+### macOS 11.3 update
 - Update OpenCore to the latest version (at the time was 0.6.8)
 - Update also your kexts and test if the system is stable
 - Prepare your USB boot drive with a copy of your EFI folder
-- Update macOS from the system menu (as in a normal system). The download of the 5.7b update and the initial install take ~ 10 mins. After that it will restart automatically
+- Update macOS from the system menu (as in a normal system). The download of the 5.7Gbb update and the initial install take ~ 10 mins. After that it will restart automatically
+- When the system restarts, choose on the OpenCore boot manager the new option that appear on the menu (Boot Macintosh HD...)
+- It start one very verbose boot process (a lot of debug messages) ~ 4 mins.
+- The system restarts automatically
+- Choose the normal Mac boot entry
+- After a small verbose boot the Apple logo appears with the progress bar ~ 3 mins.
+- The system restarts automatically
+- A small verbose boot and it shows after the Apple logo with the progress bar, but this time with the estimated time remaining ~ 10 mins.
+- The login screen appears, and you can enter in your session. Update done!
+- Restart the system to check for any problems on the boot loader
+- Done: no fuzz with the EFI folder or crashes!
+
+### macOS 11.3.1 update (NEW)
+- Prepare your USB boot drive with a copy of your EFI folder
+- Update macOS from the system menu (as in a normal system). The download of the 2.6Gb update and the initial install take ~ 10 mins. After that it will restart automatically
 - When the system restarts, choose on the OpenCore boot manager the new option that appear on the menu (Boot Macintosh HD...)
 - It start one very verbose boot process (a lot of debug messages) ~ 4 mins.
 - The system restarts automatically
