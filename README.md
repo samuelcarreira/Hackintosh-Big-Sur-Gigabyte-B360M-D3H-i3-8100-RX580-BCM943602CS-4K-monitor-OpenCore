@@ -5,8 +5,8 @@
 ![Screenshot](picture.jpg)
 
 ## Versions
-- macOS Big Sur 11.3.1 (*updated*)
-- OpenCore 0.6.8 (*updated*)
+- macOS Big Sur 11.4 (*updated*)
+- OpenCore 0.7.1 (*updated*)
 
 ## What's working
 ||Status|Additional details|
@@ -167,7 +167,7 @@ Follow the guide https://dortania.github.io/OpenCore-Desktop-Guide/
 - Compare the config.plist with the sample.plist and configure it accordingly. Use the validator to check for errors.
 - Reboot and check for the system stability (after that backup again your EFI folder)
 
-### OpenCore 0.6.4 to 0.6.7 update (NEW)
+### OpenCore 0.6.4 to 0.6.7 update
 - Backup your EFI folder on a USB flash drive
 - Follow the instructions on the official guide: https://dortania.github.io/OpenCore-Post-Install/universal/update.html#updating-opencore
 - Compare the config.plist with the sample.plist and configure it accordingly. Use the ocvalidator to check for errors. In this update I just had to delete some keys and add a few ones.
@@ -200,7 +200,7 @@ Sample.plist -> UEFI -> Quirks - Missing Key: DeduplicateBootOrder
 
 - Reboot and check for the system stability (after that backup again your EFI folder)
 
-### OpenCore 0.6.7 to 0.6.8 update (NEW)
+### OpenCore 0.6.7 to 0.6.8 update
 - Backup your EFI folder on a USB flash drive
 - Follow the instructions on the official guide: https://dortania.github.io/OpenCore-Post-Install/universal/update.html#updating-opencore
 - Compare the config.plist with the sample.plist and configure it accordingly. Use the ocvalidator to check for errors. In this update I just had to delete some keys and add a few ones.
@@ -213,6 +213,38 @@ UEFI -> AppleInput
 Remove:
 DevicePorperties -> PciRoot...
 UEFI -> ProtocolOverrides -> AppleEvent
+```
+- Reboot and check for the system stability (after that backup again your EFI folder)
+
+### OpenCore 0.6.8 to 0.7.1 update (NEW)
+- Backup your EFI folder on a USB flash drive
+- Follow the instructions on the official guide: https://dortania.github.io/OpenCore-Post-Install/universal/update.html#updating-opencore
+- Compare the config.plist with the sample.plist and configure it accordingly. Use the ocvalidator to check for errors. In this update I just had to delete some keys and add a few ones.
+```
+Add
+ACPI -> Quirks - Missing Key: SyncTableIds
+Kernel -> Quirks - Missing Key: ProvideCurrentCpuInfo
+Kernel -> Scheme - Missing Key: CustomKernel
+Misc -> Entries -> Array - Missing Key: Flavour
+Misc -> Security - Missing Key: AllowToggleSip
+Misc -> Tools -> Array - Missing Key: Flavour
+NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 - Missing Key: ForceDisplayRotationInEFI
+Generic - Missing Key: AdviseFeatures
+UEFI -> AppleInput -> CustomDelays - Type Difference: String --> Boolean
+UEFI -> Output -> GopPassThrough - Type Difference: Boolean --> String
+UEFI -> ProtocolOverrides - Missing Key: AppleEg2Info
+UEFI -> Quirks - Missing Key: EnableVectorAcceleration
+UEFI -> Quirks - Missing Key: ForgeUefiSupport
+UEFI -> Quirks - Missing Key: ReloadOptionRoms
+
+Remove
+PlatformInfo -> Generic - Missing Key: AdviseWindows
+```
+- Use ocvalidate tool (inside utilities folder). Open terminal drag and drop the ocvalidate executable, drag and drop the config.plist. You should have something like this:
+```
+/Users/username/Downloads/OpenCore-0.7.1-RELEASE/Utilities/ocvalidate/ocvalidate  /Volumes/EFI/EFI/OC/config.plist
+
+Completed validating /Volumes/EFI/EFI/OC/config.plist in 1 ms. No issues found.
 ```
 - Reboot and check for the system stability (after that backup again your EFI folder)
 
@@ -273,9 +305,24 @@ UEFI -> ProtocolOverrides -> AppleEvent
 - Restart the system to check for any problems on the boot loader
 - Done: no fuzz with the EFI folder or crashes!
 
-### macOS 11.3.1 update (NEW)
+### macOS 11.3.1 update
 - Prepare your USB boot drive with a copy of your EFI folder
 - Update macOS from the system menu (as in a normal system). The download of the 2.6Gb update and the initial install take ~ 10 mins. After that it will restart automatically
+- When the system restarts, choose on the OpenCore boot manager the new option that appear on the menu (Boot Macintosh HD...)
+- It start one very verbose boot process (a lot of debug messages) ~ 4 mins.
+- The system restarts automatically
+- Choose the normal Mac boot entry
+- After a small verbose boot the Apple logo appears with the progress bar ~ 3 mins.
+- The system restarts automatically
+- A small verbose boot and it shows after the Apple logo with the progress bar, but this time with the estimated time remaining ~ 10 mins.
+- The login screen appears, and you can enter in your session. Update done!
+- Restart the system to check for any problems on the boot loader
+- Done: no fuzz with the EFI folder or crashes!
+
+
+### macOS 11.4 update (NEW)
+- Prepare your USB boot drive with a copy of your EFI folder
+- Update macOS from the system menu (as in a normal system) and click to install it.
 - When the system restarts, choose on the OpenCore boot manager the new option that appear on the menu (Boot Macintosh HD...)
 - It start one very verbose boot process (a lot of debug messages) ~ 4 mins.
 - The system restarts automatically
