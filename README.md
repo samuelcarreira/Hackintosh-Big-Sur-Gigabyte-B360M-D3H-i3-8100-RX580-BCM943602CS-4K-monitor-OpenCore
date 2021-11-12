@@ -5,8 +5,8 @@
 ![Screenshot](picture.jpg)
 
 ## Versions
-- macOS Big Sur 11.4 (*updated*)
-- OpenCore 0.7.1 (*updated*)
+- macOS Big Sur 11.6.1 (*updated*)
+- OpenCore 0.7.5 (*updated*)
 
 ## What's working
 ||Status|Additional details|
@@ -216,7 +216,7 @@ UEFI -> ProtocolOverrides -> AppleEvent
 ```
 - Reboot and check for the system stability (after that backup again your EFI folder)
 
-### OpenCore 0.6.8 to 0.7.1 update (NEW)
+### OpenCore 0.6.8 to 0.7.1 update
 - Backup your EFI folder on a USB flash drive
 - Follow the instructions on the official guide: https://dortania.github.io/OpenCore-Post-Install/universal/update.html#updating-opencore
 - Compare the config.plist with the sample.plist and configure it accordingly. Use the ocvalidator to check for errors. In this update I just had to delete some keys and add a few ones.
@@ -239,6 +239,30 @@ UEFI -> Quirks - Missing Key: ReloadOptionRoms
 
 Remove
 PlatformInfo -> Generic - Missing Key: AdviseWindows
+```
+- Use ocvalidate tool (inside utilities folder). Open terminal drag and drop the ocvalidate executable, drag and drop the config.plist. You should have something like this:
+```
+/Users/username/Downloads/OpenCore-0.7.1-RELEASE/Utilities/ocvalidate/ocvalidate  /Volumes/EFI/EFI/OC/config.plist
+
+Completed validating /Volumes/EFI/EFI/OC/config.plist in 1 ms. No issues found.
+```
+- Reboot and check for the system stability (after that backup again your EFI folder)
+
+
+### OpenCore 0.7.1 to 0.7.5 update (NEW)
+- Backup your EFI folder on a USB flash drive
+- Follow the instructions on the official guide: https://dortania.github.io/OpenCore-Post-Install/universal/update.html#updating-opencore
+- Compare the config.plist with the sample.plist and configure it accordingly. Use the ocvalidator to check for errors. In this update I just had to delete some keys and add a few ones.
+```
+config.plist -> Booter -> Quirks - Missing Key: ResizeAppleGpuBars
+config.plist -> UEFI -> AppleInput - Missing Key: GraphicsInputMirroring
+config.plist -> UEFI -> Drivers -> Array - Type Difference: String --> Dictionary
+config.plist -> UEFI -> Quirks - Missing Key: ForceOcWriteFlash
+config.plist -> UEFI -> Quirks - Missing Key: ResizeGpuBars
+
+Checking for values missing from Sample:
+
+ - Nothing missing from Sample config!
 ```
 - Use ocvalidate tool (inside utilities folder). Open terminal drag and drop the ocvalidate executable, drag and drop the config.plist. You should have something like this:
 ```
@@ -320,7 +344,7 @@ Completed validating /Volumes/EFI/EFI/OC/config.plist in 1 ms. No issues found.
 - Done: no fuzz with the EFI folder or crashes!
 
 
-### macOS 11.4 update (NEW)
+### macOS 11.4 update
 - Prepare your USB boot drive with a copy of your EFI folder
 - Update macOS from the system menu (as in a normal system) and click to install it.
 - When the system restarts, choose on the OpenCore boot manager the new option that appear on the menu (Boot Macintosh HD...)
@@ -334,6 +358,19 @@ Completed validating /Volumes/EFI/EFI/OC/config.plist in 1 ms. No issues found.
 - Restart the system to check for any problems on the boot loader
 - Done: no fuzz with the EFI folder or crashes!
 
+
+### macOS 11.6.1 update (NEW)
+- Prepare your USB boot drive with a copy of your EFI folder
+- Update macOS from the system menu (as in a normal system) and click to install it.
+- When the system restarts, choose on the OpenCore boot manager the new option that appear on the menu (Boot Macintosh HD...)
+- It start one very verbose boot process (a lot of debug messages) ~ 4 mins.
+- The system restarts automatically
+- Choose the normal Mac boot entry
+- After a small verbose boot the Apple logo appears with the progress bar ~ 3 mins.
+- The system restarts automatically. Update done!
+- Update the other system updates and wait while macOS is optimizing the system.
+- Restart the system to check for any problems on the boot loader
+- Done: no fuzz with the EFI folder or crashes!
 
 ## Credits
 - https://github.com/acidanthera/OpenCorePkg
